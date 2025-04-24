@@ -156,7 +156,7 @@ const Nav = () => {
         <div className="hidden md:block">
           <a
             href="#contact"
-            className="text-white bg-sky-900 hover:bg-sky-900/90 px-4 py-2"
+            className="text-white bg-[#E9A319] hover:bg-[#E9A319]/90 px-4 py-2"
           >
             Contact Us
           </a>
@@ -182,7 +182,7 @@ const Nav = () => {
             <li>
               <a
                 href="#contact"
-                className="text-white bg-sky-900 hover:bg-sky-900/90 px-4 py-2 rounded"
+                className="text-white bg-[#E9A319] hover:bg-[#E9A319]/90 px-4 py-2 rounded"
                 onClick={(e) => {
                   e.preventDefault();
                   handleCloseMenu();
