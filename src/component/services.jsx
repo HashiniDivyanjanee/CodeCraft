@@ -4,11 +4,16 @@ import serviceImg1 from "../assets/service1.avif";
 import serviceImg2 from "../assets/service2.jpg";
 import serviceImg3 from "../assets/service3.jpg";
 import serviceImg4 from "../assets/service4.jpg";
+import { motion } from "framer-motion"
+import { fadeIn } from "../utilis/animationVariants";
+
 const Services = () => {
   return (
     <div id="services" className="h-full bg-[#f1f1f1]">
       <div className="pt-28 px-4 container mx-auto">
-        <div className="text-center space-y-5">
+        <motion.div variants={fadeIn('up', 0.2)}
+          initial="hidden" whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }} className="text-center space-y-5">
           <h2 className="text-4xl font-bold text-heroBg">Services</h2>
           <p className="md:w-1/2 mx-auto">
             Video provides a powerful way to help you prove your point. When you
@@ -16,20 +21,24 @@ const Services = () => {
             you want to add. You can also type a keyword to search online for
             the video that best fits your document.
           </p>
-        </div>
+        </motion.div>
 
         {/* Service Category Section */}
         <div className="py-12 md:w-4/5 mx-auto">
           <Tabs>
-            <TabList className="flex flex-wrap justify-between items-center md:gap-8 gap-4">
+            <motion.TabList variants={fadeIn('up', 0.3)}
+              initial="hidden" whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }} className="flex flex-wrap justify-between items-center md:gap-8 gap-4">
               <Tab>Web Development</Tab>
               <Tab>Mobile Development</Tab>
               <Tab>Custom Software</Tab>
               <Tab>Digital Marketing</Tab>
-            </TabList>
+            </motion.TabList>
 
             <TabPanel>
-              <div className="flex flex-col md:flex-row gap-8 mt-8">
+              <motion.div variants={fadeIn('up', 0.2)}
+                initial="hidden" whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }} className="flex flex-col md:flex-row gap-8 mt-8">
                 {/* Left side (text) */}
                 <div className="md:w-1/2 bg-white rounded-lg p-12">
                   <h3 className="text-3xl font-semibold text-yellow-500 mb-4">
@@ -57,11 +66,13 @@ const Services = () => {
                     className="w-full h-auto rounded-2xl object-cover"
                   />
                 </div>
-              </div>
+              </motion.div>
             </TabPanel>
 
             <TabPanel>
-              <div className="flex flex-col md:flex-row gap-8 mt-8">
+              <motion.div variants={fadeIn('up', 0.2)} 
+        initial="hidden" whileInView={"show"} 
+        viewport={{ once: false, amount: 0.7 }}  className="flex flex-col md:flex-row gap-8 mt-8">
                 {/* Left side (text) */}
                 <div className="md:w-1/2 bg-white rounded-lg p-12">
                   <h3 className="text-3xl font-semibold text-yellow-500 mb-4">
@@ -89,11 +100,13 @@ const Services = () => {
                     className="w-full h-auto rounded-2xl object-cover"
                   />
                 </div>
-              </div>
+              </motion.div>
             </TabPanel>
 
             <TabPanel>
-              <div className="flex flex-col md:flex-row gap-8 mt-8">
+              <motion.div variants={fadeIn('up', 0.2)} 
+        initial="hidden" whileInView={"show"} 
+        viewport={{ once: false, amount: 0.7 }}  className="flex flex-col md:flex-row gap-8 mt-8">
                 {/* Left side (text) */}
                 <div className="md:w-1/2 bg-white rounded-lg p-12">
                   <h3 className="text-3xl font-semibold text-yellow-500 mb-4">
@@ -121,11 +134,13 @@ const Services = () => {
                     className="w-full h-auto rounded-2xl object-cover"
                   />
                 </div>
-              </div>
+              </motion.div>
             </TabPanel>
 
             <TabPanel>
-              <div className="flex flex-col md:flex-row gap-8 mt-8">
+              <motion.div variants={fadeIn('up', 0.2)} 
+        initial="hidden" whileInView={"show"} 
+        viewport={{ once: false, amount: 0.7 }}  className="flex flex-col md:flex-row gap-8 mt-8">
                 {/* Left side (text) */}
                 <div className="md:w-1/2 bg-white rounded-lg p-12">
                   <h3 className="text-3xl font-semibold text-yellow-500 mb-4">
@@ -153,7 +168,7 @@ const Services = () => {
                     className="w-full h-auto rounded-2xl object-cover"
                   />
                 </div>
-              </div>
+              </motion.div>
             </TabPanel>
           </Tabs>
         </div>

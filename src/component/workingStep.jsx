@@ -1,5 +1,7 @@
 import React from "react";
 import serviceImage from "../assets/service4.jpg";
+import { motion } from "framer-motion"
+import { fadeIn } from "../utilis/animationVariants";
 const WorkingStep = () => {
   return (
     <div
@@ -7,7 +9,9 @@ const WorkingStep = () => {
       style={{ backgroundImage: `url(${serviceImage})` }}
     >
       <div className="absolute inset-0 bg-[#2b2b2b] opacity-85"></div>
-      <div className="relative container mx-auto px-4 py-20">
+      <motion.div variants={fadeIn('up', 0.2)}
+                            initial="hidden" whileInView={"show"}
+                            viewport={{ once: false, amount: 0.7 }} className="relative container mx-auto px-4 py-20">
         <div className="text-white text-center mb-20">
           <h2 className="text-4xl font-bold mb-4">How It Works</h2>
           <p className="text-lg md:w-1/2 w-full mx-auto">
@@ -48,7 +52,7 @@ const WorkingStep = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

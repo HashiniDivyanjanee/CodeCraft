@@ -118,6 +118,23 @@ const Nav = () => {
           Pricing
         </motion.a>
       </li>
+       <li>
+        <motion.a
+          href="#testimonial"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={(e) => {
+            e.preventDefault();
+            handleCloseMenu();
+            handleScrollTo("testimonial");
+          }}
+          className={`text-white ${
+            activeSection === "testimonial" ? "isActive" : ""
+          }`}
+        >
+          Testimonial
+        </motion.a>
+      </li>
       <li>
         <motion.a
           href="#contact"
@@ -155,6 +172,10 @@ const Nav = () => {
         {/* Button Section */}
         <div className="hidden md:block">
           <a
+          onClick={e=>{
+            e.preventDefault();
+            handleScrollTo("contact");
+          }}
             href="#contact"
             className="text-white bg-[#E9A319] hover:bg-[#E9A319]/90 px-4 py-2"
           >
@@ -186,6 +207,7 @@ const Nav = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   handleCloseMenu();
+                   handleScrollTo("contact");
                 }}
               >
                 Contact Us

@@ -7,6 +7,8 @@ import Contact from "./component/contact";
 import WorkingStep from "./component/workingStep";
 import NavBar from "./component/nav";
 import Testimonial from "./component/testimonial";
+import Footer from "./component/footer";
+
 function App() {
   return (
     <div className="overflow-x-hidden">
@@ -18,6 +20,7 @@ function App() {
       <Pricing />
       <Testimonial />
       <Contact />
+      <Footer />
     </div>
   );
 }
